@@ -55,6 +55,7 @@
 		189DDB2B21021D7300823EC3 /* PolicyForamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB0321021D7200823EC3 /* PolicyForamCell.swift */; };
 		189DDB2C21021D7300823EC3 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB0421021D7200823EC3 /* VideoCell.swift */; };
 		189DDB2F21023D7500823EC3 /* Boot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB2D21023D7500823EC3 /* Boot.xcdatamodeld */; };
+		189DDB3121024D6B00823EC3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DDA9F2102136A00823EC3 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -528,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189DDB3121024D6B00823EC3 /* Info.plist in Resources */,
 				189DDA9E2102136A00823EC3 /* LaunchScreen.storyboard in Resources */,
 				189DDA9B2102136A00823EC3 /* Assets.xcassets in Resources */,
 				189DDA962102136900823EC3 /* Main.storyboard in Resources */,
