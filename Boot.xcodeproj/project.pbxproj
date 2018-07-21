@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189456E521030E6C00260434 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189456E421030E6C00260434 /* EventDetailsViewController.swift */; };
+		189456E72103346D00260434 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189456E62103346C00260434 /* MapViewController.swift */; };
 		189DDA912102136900823EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDA902102136900823EC3 /* AppDelegate.swift */; };
 		189DDA932102136900823EC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDA922102136900823EC3 /* ViewController.swift */; };
 		189DDA962102136900823EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189DDA942102136900823EC3 /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189456E421030E6C00260434 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		189456E62103346C00260434 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		189DDA8D2102136900823EC3 /* Boot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DDA902102136900823EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DDA922102136900823EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -455,6 +459,8 @@
 			isa = PBXGroup;
 			children = (
 				189DDB33210253A400823EC3 /* EventNScheduleViewController.swift */,
+				189456E421030E6C00260434 /* EventDetailsViewController.swift */,
+				189456E62103346C00260434 /* MapViewController.swift */,
 			);
 			path = EventNSchedule;
 			sourceTree = "<group>";
@@ -704,6 +710,7 @@
 				189DDB3821026EFA00823EC3 /* Event.swift in Sources */,
 				189DDB2021021D7300823EC3 /* BootTeamViewController.swift in Sources */,
 				189DDB0621021D7300823EC3 /* TPKAScrollViewController.m in Sources */,
+				189456E521030E6C00260434 /* EventDetailsViewController.swift in Sources */,
 				189DDB0921021D7300823EC3 /* AppParam.swift in Sources */,
 				189DDB1D21021D7300823EC3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				189DDB2C21021D7300823EC3 /* VideoCell.swift in Sources */,
@@ -723,6 +730,7 @@
 				189DDB1821021D7300823EC3 /* Title.swift in Sources */,
 				189DDB0A21021D7300823EC3 /* ViewBorder.swift in Sources */,
 				189DDA912102136900823EC3 /* AppDelegate.swift in Sources */,
+				189456E72103346D00260434 /* MapViewController.swift in Sources */,
 				189DDB34210253A500823EC3 /* EventNScheduleViewController.swift in Sources */,
 				189DDB0821021D7300823EC3 /* WebServiceActions.swift in Sources */,
 				189DDB1021021D7300823EC3 /* TopSliderCell.swift in Sources */,

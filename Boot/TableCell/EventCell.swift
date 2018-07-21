@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol EventCellDelegate {
+    func showMapForLatLong(lat: String, Long: String)
+}
+
 class EventCell: UITableViewCell {
     @IBOutlet var lblEventName:UILabel!
     @IBOutlet var lblStartAt:UILabel!
     @IBOutlet var lblEndAt:UILabel!
     @IBOutlet var lblAddress:UILabel!
+    var delegate: EventCellDelegate?
     var lattitude: String?
     var longitude: String?
 //    @IBOutlet var lblAttandanceType:UILabel!
@@ -38,6 +43,7 @@ class EventCell: UITableViewCell {
     
     @IBAction func btnMapItAction(_ sender: UIButton) {
         print("lat = \(lattitude), long = \(longitude)")
+        delegate?.showMapForLatLong(lat: lattitude!, Long: longitude!)
     }
 
 }

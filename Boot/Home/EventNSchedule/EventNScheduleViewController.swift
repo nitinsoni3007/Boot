@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EventCellDelegate {
     
     @IBOutlet weak var lblMonth: UILabel!
     @IBOutlet weak var btnAll: UIButton!
@@ -61,11 +61,28 @@ class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITab
         let cellId = "EventCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! EventCell
         cell.configure(withEvent: arrEvents[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 142
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "EventDetailsViewController") as! EventDetailsViewController
+        controller.selectedEvent = arrEvents[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    //MARK: event cell delegate
+    func showMapForLatLong(lat: String, Long: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        controller.latitude = lat
+        controller.longitude = Long
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }
