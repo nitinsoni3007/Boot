@@ -13,7 +13,9 @@ class EventCell: UITableViewCell {
     @IBOutlet var lblStartAt:UILabel!
     @IBOutlet var lblEndAt:UILabel!
     @IBOutlet var lblAddress:UILabel!
-    @IBOutlet var lblAttandanceType:UILabel!
+    var lattitude: String?
+    var longitude: String?
+//    @IBOutlet var lblAttandanceType:UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,11 +28,16 @@ class EventCell: UITableViewCell {
     }
     
     func configure(withEvent event: Event) {
-        
+        lblEventName.text = event.title
+        lblStartAt.text = "Start :" + (event.starttime ?? "")
+        lblEndAt.text = "End :" + (event.endtime ?? "")
+        lblAddress.text = event.location ?? ""
+        lattitude = event.latitude
+        longitude = event.longitude
     }
     
     @IBAction func btnMapItAction(_ sender: UIButton) {
-        
+        print("lat = \(lattitude), long = \(longitude)")
     }
 
 }

@@ -163,7 +163,8 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         else if indexPath.row == 11
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: <#T##String#>)
+            let controller = storyboard.instantiateViewController(withIdentifier: "EventNScheduleViewController") as! EventNScheduleViewController
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
     

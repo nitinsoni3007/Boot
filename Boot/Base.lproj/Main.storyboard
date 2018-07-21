@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="282" y="-158"/>
         </scene>
-        <!--View Controller-->
+        <!--EventN Schedule View Controller-->
         <scene sceneID="mG1-D6-Dxl">
             <objects>
-                <viewController id="B1U-bc-63l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventNScheduleViewController" id="B1U-bc-63l" customClass="EventNScheduleViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sF6-ba-seT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +58,9 @@
                                                     <constraint firstAttribute="height" constant="24" id="ul0-9u-r7c"/>
                                                 </constraints>
                                                 <state key="normal" image="left-arrow"/>
+                                                <connections>
+                                                    <action selector="btnBackAction:" destination="B1U-bc-63l" eventType="touchUpInside" id="7eT-q1-VBQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RA-AR-t0h">
                                                 <rect key="frame" x="62" y="13" width="82" height="24"/>
@@ -110,6 +113,9 @@
                                         <state key="normal" title="Now">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnNowAction:" destination="B1U-bc-63l" eventType="touchUpInside" id="2cm-TM-Zw0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-2f-0th">
                                         <rect key="frame" x="262" y="15" width="30" height="30"/>
@@ -122,6 +128,9 @@
                                         <state key="normal" title="All">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAllAction:" destination="B1U-bc-63l" eventType="touchUpInside" id="bss-fr-wyg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,14 +211,14 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collindale Avanue, London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-hr-R8d">
-                                                    <rect key="frame" x="40" y="80" width="160" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collindale Avanue, London" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-hr-R8d">
+                                                    <rect key="frame" x="40" y="78" width="216" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-WG-4Qx">
-                                                    <rect key="frame" x="40" y="96" width="9" height="17"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-WG-4Qx">
+                                                    <rect key="frame" x="40" y="94" width="9" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -225,8 +234,8 @@
                                                         <action selector="btnMapItAction:" destination="0Pi-87-feV" eventType="touchUpInside" id="vqP-DN-PiO"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertual Attandance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-bo-o2x">
-                                                    <rect key="frame" x="40" y="115" width="116" height="16"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertual Attandance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-bo-o2x">
+                                                    <rect key="frame" x="40" y="113" width="116" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -243,13 +252,14 @@
                                                 <constraint firstItem="PB4-Yp-rNL" firstAttribute="top" secondItem="oJq-jI-Jfj" secondAttribute="bottom" constant="6" id="O0b-bV-dsB"/>
                                                 <constraint firstItem="uIB-WG-4Qx" firstAttribute="leading" secondItem="0Oo-hr-R8d" secondAttribute="leading" id="Rt8-fU-JnM"/>
                                                 <constraint firstItem="D57-rp-Qgp" firstAttribute="leading" secondItem="PB4-Yp-rNL" secondAttribute="trailing" constant="4" id="TdV-ce-u2Z"/>
+                                                <constraint firstItem="BVu-Tr-1hU" firstAttribute="leading" secondItem="0Oo-hr-R8d" secondAttribute="trailing" constant="40" id="Tio-PF-ngf"/>
                                                 <constraint firstItem="Fw2-IR-mew" firstAttribute="centerY" secondItem="Yvp-lu-onB" secondAttribute="centerY" id="UZT-6L-wxQ"/>
                                                 <constraint firstItem="0Oo-hr-R8d" firstAttribute="leading" secondItem="af1-2x-vpM" secondAttribute="trailing" constant="4" id="Vn1-PV-8BR"/>
                                                 <constraint firstItem="PB4-Yp-rNL" firstAttribute="leading" secondItem="oJq-jI-Jfj" secondAttribute="leading" id="WXz-2g-ds8"/>
                                                 <constraint firstItem="tEH-bo-o2x" firstAttribute="leading" secondItem="0Oo-hr-R8d" secondAttribute="leading" id="Wlt-SQ-Bm5"/>
                                                 <constraint firstItem="oJq-jI-Jfj" firstAttribute="leading" secondItem="gmz-mc-fNs" secondAttribute="leading" constant="16" id="Wzf-dF-CIg"/>
                                                 <constraint firstAttribute="trailing" secondItem="BVu-Tr-1hU" secondAttribute="trailing" constant="6" id="cFC-Ou-S6M"/>
-                                                <constraint firstItem="0Oo-hr-R8d" firstAttribute="centerY" secondItem="af1-2x-vpM" secondAttribute="centerY" id="cv7-ex-vpY"/>
+                                                <constraint firstItem="0Oo-hr-R8d" firstAttribute="top" secondItem="af1-2x-vpM" secondAttribute="top" id="gHs-GO-8RR"/>
                                                 <constraint firstItem="Fw2-IR-mew" firstAttribute="leading" secondItem="Yvp-lu-onB" secondAttribute="trailing" constant="4" id="gMO-hs-aPO"/>
                                                 <constraint firstItem="oJq-jI-Jfj" firstAttribute="top" secondItem="gmz-mc-fNs" secondAttribute="top" constant="4" id="jpu-dX-OD9"/>
                                                 <constraint firstItem="Yvp-lu-onB" firstAttribute="top" secondItem="PB4-Yp-rNL" secondAttribute="bottom" constant="6" id="kSA-4U-bQk"/>
@@ -257,7 +267,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblAddress" destination="0Oo-hr-R8d" id="VLD-oS-B7n"/>
-                                            <outlet property="lblAttandanceType" destination="tEH-bo-o2x" id="jK3-cS-6zt"/>
                                             <outlet property="lblEndAt" destination="Fw2-IR-mew" id="bvB-4m-KOw"/>
                                             <outlet property="lblEventName" destination="oJq-jI-Jfj" id="Ye2-aK-T0X"/>
                                             <outlet property="lblStartAt" destination="D57-rp-Qgp" id="bNh-Xy-CJN"/>
@@ -291,6 +300,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H4Z-yE-nTO"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAll" destination="b5r-2f-0th" id="pf9-7M-chi"/>
+                        <outlet property="btnNow" destination="gg0-zV-nRe" id="nJ8-Ce-Lie"/>
+                        <outlet property="lblMonth" destination="SJg-Gi-X3E" id="0V8-zu-CWB"/>
+                        <outlet property="tblView" destination="dXY-vr-2PK" id="XJg-2d-aLL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iow-8n-1ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +314,7 @@
         <!--Home View Controller-->
         <scene sceneID="1SK-QN-7GT">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="obe-EJ-ahB" customClass="HomeViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="obe-EJ-ahB" customClass="HomeViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gcx-Jc-lVE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +345,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="iSZ-1s-k14" customClass="itemCell" customModule="BOOT" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="iSZ-1s-k14" customClass="itemCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -428,7 +443,7 @@
         <!--Main Festo View Controller-->
         <scene sceneID="Eia-1x-6yN">
             <objects>
-                <viewController storyboardIdentifier="MainFestoViewController" id="4GQ-cB-abs" customClass="MainFestoViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainFestoViewController" id="4GQ-cB-abs" customClass="MainFestoViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KMU-sr-aQq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -460,7 +475,7 @@
                                 <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PolicyCell" rowHeight="141" id="0oc-5S-by0" customClass="PolicyCell" customModule="BOOT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PolicyCell" rowHeight="141" id="0oc-5S-by0" customClass="PolicyCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0oc-5S-by0" id="dJG-3H-rBc">
@@ -548,7 +563,7 @@
         <!--BootTeamViewController-->
         <scene sceneID="LSp-mq-EOJ">
             <objects>
-                <viewController storyboardIdentifier="BootTeamViewController" id="t2a-no-JaD" userLabel="BootTeamViewController" customClass="BootTeamViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BootTeamViewController" id="t2a-no-JaD" userLabel="BootTeamViewController" customClass="BootTeamViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQJ-dK-rQO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -589,7 +604,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopSliderCell" id="yLa-nT-0a6" customClass="TopSliderCell" customModule="BOOT" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopSliderCell" id="yLa-nT-0a6" customClass="TopSliderCell" customModule="Boot" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -658,7 +673,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="BootTeamCell" id="LJ2-F2-q3p" customClass="BootTeamCell" customModule="BOOT" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="BootTeamCell" id="LJ2-F2-q3p" customClass="BootTeamCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-6.5" width="374" height="557"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -669,7 +684,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="557"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BootTamTableCell" rowHeight="104" id="prj-SR-cvr" customClass="BootTamTableCell" customModule="BOOT" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BootTamTableCell" rowHeight="104" id="prj-SR-cvr" customClass="BootTamTableCell" customModule="Boot" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="374" height="104"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="prj-SR-cvr" id="wma-ay-PAa">
@@ -785,7 +800,7 @@
         <!--Boot Detail View Controller-->
         <scene sceneID="t1o-UN-2zd">
             <objects>
-                <viewController storyboardIdentifier="BootDetailViewController" id="nnz-vq-oUJ" customClass="BootDetailViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BootDetailViewController" id="nnz-vq-oUJ" customClass="BootDetailViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJJ-1P-uUu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -857,7 +872,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BootDetailScrollTopCell" id="en0-6d-ata" customClass="BootDetailScrollTopCell" customModule="BOOT" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BootDetailScrollTopCell" id="en0-6d-ata" customClass="BootDetailScrollTopCell" customModule="Boot" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -937,7 +952,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BootTeamDetailCell" id="8px-bv-mf0" customClass="BootTeamDetailCell" customModule="BOOT" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BootTeamDetailCell" id="8px-bv-mf0" customClass="BootTeamDetailCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-1" width="376" height="381"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -948,7 +963,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="376" height="381"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BootDetailTableCell" rowHeight="353" id="hja-bT-4mL" customClass="BootDetailTableCell" customModule="BOOT" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BootDetailTableCell" rowHeight="353" id="hja-bT-4mL" customClass="BootDetailTableCell" customModule="Boot" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="376" height="353"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hja-bT-4mL" id="Zce-1s-DC0">
@@ -1041,7 +1056,7 @@
         <!--Video View Controller-->
         <scene sceneID="FJQ-Lh-9sV">
             <objects>
-                <viewController storyboardIdentifier="VideoViewController" id="bzE-Y6-Xb0" customClass="VideoViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" id="bzE-Y6-Xb0" customClass="VideoViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vAE-hS-MBW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1073,7 +1088,7 @@
                                 <rect key="frame" x="0.0" y="55" width="375" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="105" id="hmH-ol-5zf" customClass="VideoCell" customModule="BOOT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="105" id="hmH-ol-5zf" customClass="VideoCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmH-ol-5zf" id="15H-gc-wlP">
@@ -1168,7 +1183,7 @@
         <!--Policy Foram View Controller-->
         <scene sceneID="iNB-d6-E0m">
             <objects>
-                <viewController storyboardIdentifier="PolicyForamViewController" id="gfc-JM-4hw" customClass="PolicyForamViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PolicyForamViewController" id="gfc-JM-4hw" customClass="PolicyForamViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qsz-Bi-f38">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1200,7 +1215,7 @@
                                 <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PolicyForamCell" rowHeight="55" id="4qD-Zl-Uh6" customClass="PolicyForamCell" customModule="BOOT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PolicyForamCell" rowHeight="55" id="4qD-Zl-Uh6" customClass="PolicyForamCell" customModule="Boot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4qD-Zl-Uh6" id="FBY-Ql-UA8">
@@ -1262,7 +1277,7 @@
         <!--Registration View Controller-->
         <scene sceneID="Q69-U1-uZg">
             <objects>
-                <viewController storyboardIdentifier="RegistrationViewController" id="PdK-7o-QIk" customClass="RegistrationViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="PdK-7o-QIk" customClass="RegistrationViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Znx-lZ-Q3s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2489,7 +2504,7 @@
         <!--Launch View Controller-->
         <scene sceneID="IAO-Ih-Xcd">
             <objects>
-                <viewController storyboardIdentifier="LaunchViewController" id="6Ax-1s-h5i" customClass="LaunchViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchViewController" id="6Ax-1s-h5i" customClass="LaunchViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbx-Rd-90k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2515,7 +2530,7 @@
         <!--Aa View Controller-->
         <scene sceneID="72q-BV-DUs">
             <objects>
-                <viewController storyboardIdentifier="aaViewController" id="d1v-Y4-KeI" customClass="aaViewController" customModule="BOOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aaViewController" id="d1v-Y4-KeI" customClass="aaViewController" customModule="Boot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qnl-1S-7QG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
