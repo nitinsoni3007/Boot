@@ -8,22 +8,28 @@
 
 import UIKit
 
-class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EventCellDelegate {
+class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EventCellDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var lblMonth: UILabel!
     @IBOutlet weak var btnAll: UIButton!
     @IBOutlet weak var btnNow: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblView: UITableView!
+    
     var arrEvents = [Event]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let searchTextField = searchBar.value(forKey: "searchField") as! UITextField
+        searchTextField.backgroundColor = UIColor.clear
+        searchBar.tintColor = UIColor.clear
+        searchBar.backgroundColor = UIColor.clear
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchEvents()
+        
     }
     
     func fetchEvents() {
@@ -50,6 +56,12 @@ class EventNScheduleViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func btnNowAction(_ sender: Any) {
+    }
+    
+    //MARK: search bar delegate
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+        //api for searching with search text
     }
     
     //MARK: tableview delegate and datasource

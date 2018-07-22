@@ -69,13 +69,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="76H-xH-H5z">
+                                                <rect key="frame" x="188" y="4" width="187" height="42"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="B1U-bc-63l" id="akM-IZ-sEz"/>
+                                                </connections>
+                                            </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7RA-AR-t0h" firstAttribute="centerY" secondItem="bQb-ff-rhD" secondAttribute="centerY" id="33p-99-qMf"/>
                                             <constraint firstItem="bQb-ff-rhD" firstAttribute="centerY" secondItem="vU7-rK-d8g" secondAttribute="centerY" id="5mt-l6-FEC"/>
+                                            <constraint firstItem="76H-xH-H5z" firstAttribute="width" secondItem="vU7-rK-d8g" secondAttribute="width" multiplier="0.5" id="8eg-sN-Kxe"/>
                                             <constraint firstItem="7RA-AR-t0h" firstAttribute="leading" secondItem="bQb-ff-rhD" secondAttribute="trailing" constant="30" id="JFK-o7-K00"/>
+                                            <constraint firstItem="76H-xH-H5z" firstAttribute="top" secondItem="vU7-rK-d8g" secondAttribute="top" constant="4" id="Y21-aX-c2K"/>
+                                            <constraint firstAttribute="bottom" secondItem="76H-xH-H5z" secondAttribute="bottom" constant="4" id="cCe-Uy-xNo"/>
                                             <constraint firstItem="bQb-ff-rhD" firstAttribute="leading" secondItem="vU7-rK-d8g" secondAttribute="leading" constant="8" id="wp5-tl-O31"/>
+                                            <constraint firstAttribute="trailing" secondItem="76H-xH-H5z" secondAttribute="trailing" id="zli-Ll-Ev1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -305,6 +317,7 @@
                         <outlet property="btnAll" destination="b5r-2f-0th" id="pf9-7M-chi"/>
                         <outlet property="btnNow" destination="gg0-zV-nRe" id="nJ8-Ce-Lie"/>
                         <outlet property="lblMonth" destination="SJg-Gi-X3E" id="0V8-zu-CWB"/>
+                        <outlet property="searchBar" destination="76H-xH-H5z" id="dWa-qk-2Ou"/>
                         <outlet property="tblView" destination="dXY-vr-2PK" id="XJg-2d-aLL"/>
                     </connections>
                 </viewController>
@@ -507,28 +520,35 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjV-ly-10R">
                                                 <rect key="frame" x="0.0" y="48" width="355" height="351"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="speakers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMD-FS-JzO">
-                                                        <rect key="frame" x="156" y="165" width="69" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speakers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMD-FS-JzO">
+                                                        <rect key="frame" x="8" y="8" width="69" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="xMD-FS-JzO" firstAttribute="top" secondItem="AjV-ly-10R" secondAttribute="top" constant="8" id="T0F-t9-ate"/>
+                                                    <constraint firstItem="xMD-FS-JzO" firstAttribute="leading" secondItem="AjV-ly-10R" secondAttribute="leading" constant="8" id="xZi-wy-Yy4"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36g-LE-Ah0">
                                                 <rect key="frame" x="0.0" y="48" width="355" height="351"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-ON-Kr6">
-                                                        <rect key="frame" x="156" y="165" width="46" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login to get your event pass." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-ON-Kr6">
+                                                        <rect key="frame" x="10" y="149" width="335" height="53"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="kY4-ON-Kr6" firstAttribute="leading" secondItem="36g-LE-Ah0" secondAttribute="leading" constant="10" id="B9V-jg-ACO"/>
+                                                    <constraint firstItem="kY4-ON-Kr6" firstAttribute="centerY" secondItem="36g-LE-Ah0" secondAttribute="centerY" id="euR-oV-svd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kY4-ON-Kr6" secondAttribute="trailing" constant="10" id="nj9-5z-ykt"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -597,6 +617,8 @@
                         <outlet property="lblDiscription" destination="Nom-aU-gtv" id="KoN-1Z-KQb"/>
                         <outlet property="lblEndTime" destination="W83-sA-5zX" id="sns-oH-TsB"/>
                         <outlet property="lblEventTitle" destination="ExB-yv-Y0N" id="LAY-nm-CAH"/>
+                        <outlet property="lblNotes" destination="kY4-ON-Kr6" id="PK7-Ec-iJy"/>
+                        <outlet property="lblSpeakers" destination="xMD-FS-JzO" id="h2v-HR-JIA"/>
                         <outlet property="lblStartTime" destination="Dgo-VK-6IY" id="Knq-hi-dSl"/>
                         <outlet property="viewAbout" destination="tMW-0q-xfk" id="6Fk-1T-Rkj"/>
                         <outlet property="viewNotes" destination="36g-LE-Ah0" id="dJH-X1-2V9"/>

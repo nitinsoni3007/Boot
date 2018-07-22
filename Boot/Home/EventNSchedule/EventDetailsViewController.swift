@@ -30,6 +30,8 @@ class EventDetailsViewController: UIViewController {
     var selectedEvent: Event?
     
     @IBOutlet weak var lblDiscription: UILabel!
+    @IBOutlet weak var lblSpeakers: UILabel!
+    @IBOutlet weak var lblNotes: UILabel!
     @IBOutlet weak var viewNotes: UIView!
     @IBOutlet weak var viewSpeakers: UIView!
     @IBOutlet weak var viewAbout: UIView!
@@ -83,6 +85,8 @@ class EventDetailsViewController: UIViewController {
         lblEndTime.text = "End :" + (selectedEvent?.endtime ?? "")
         lblAddress.text = selectedEvent!.location ?? ""
         lblDiscription.text = selectedEvent?.descriptionValue ?? ""
+        lblSpeakers.text = selectedEvent?.speakersName ?? ""
+        lblNotes.text = "Please login to get your event pass."
     }
 
     override func didReceiveMemoryWarning() {
