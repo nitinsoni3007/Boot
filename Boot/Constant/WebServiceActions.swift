@@ -19,6 +19,7 @@ struct webServiceActions {
     static let Video = "video"
     static let Title = "title"
     static let State = "ngstates"
+    static let VolunteerField = "volunteerfield"
     static let LocalGoverment = "nglga"
     static let Ward = "Ngward"
     static let ProfileJoinUs =  "profilejoinus/insert"

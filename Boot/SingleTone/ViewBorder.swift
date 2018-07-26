@@ -13,6 +13,7 @@ class ViewBorder: NSObject {
     static let  shareViewBorder =  ViewBorder()
     var arrTitle = [Title]()
     var arrState = [State]()
+    var arrVolunteerFields = [VolunteerField]()
     var arrGender = [String]()
     var arrAge = [String]()
     

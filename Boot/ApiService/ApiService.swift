@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class ApiService: NSObject {
     
@@ -44,6 +45,8 @@ class ApiService: NSObject {
             }
             
             do {
+                let respStr = String.init(data: data!, encoding: .utf8)
+                print("\(respStr)")
                 let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
                 print(json)
                 DispatchQueue.main.async(execute: {
@@ -96,6 +99,103 @@ class ApiService: NSObject {
         }
         
         task.resume()
+    }
+    
+    func callMultiPartAPI(strAction:String,strWebType:String,params: [String:String], filePath: String, complition:@escaping (Any)->()) {
+        do {
+        let request = try createRequest(params: params, filePath: filePath)
+            let session = URLSession.shared
+            
+            let task = session.dataTask(with: request as URLRequest) {
+                (data, response, error) in
+                
+                guard let _:NSData = data as NSData?, let _:URLResponse = response, error == nil else {
+                    print("error")
+                    complition("error")
+                    return
+                }
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                    print(json)
+                    DispatchQueue.main.async(execute: {
+                        complition(json)
+                    })
+                }
+                catch let jsonError{
+                    print(jsonError)
+                }
+            }
+            
+            task.resume()
+        }catch {
+            print("erro while creating multipart request")
+        }
+    }
+    
+    func createRequest(params: [String:String], filePath: String) throws -> URLRequest {
+        let parameters = params  // build your dictionary however appropriate
+        
+        let boundary = generateBoundaryString()
+        
+        let url = URL(string: "https://example.com/imageupload.php")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        let path1 = filePath
+        //, "volunteer_file": documentUrl?.lastPathComponent ?? "testFile"
+        request.httpBody = try createBody(with: parameters, filePathKey: "volunteer_file", paths: [path1], boundary: boundary)
+        
+        return request
+    }
+    
+    private func createBody(with parameters: [String: String]?, filePathKey: String, paths: [String], boundary: String) throws -> Data {
+        var body = Data()
+        
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.append("--\(boundary)\r\n")
+                body.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.append("\(value)\r\n")
+            }
+        }
+        
+        for path in paths {
+            let url = URL(fileURLWithPath: path)
+            let filename = url.lastPathComponent
+            do {
+            let data = try Data(contentsOf: url)
+            let mimetype = mimeType(for: path)
+            
+            body.append("--\(boundary)\r\n")
+            body.append("Content-Disposition: form-data; name=\"\(filePathKey)\"; filename=\"\(filename)\"\r\n")
+            body.append("Content-Type: \(mimetype)\r\n\r\n")
+            body.append(data)
+            body.append("\r\n")
+            }catch {
+                
+            }
+        }
+        
+        body.append("--\(boundary)--\r\n")
+        return body
+    }
+    
+    private func generateBoundaryString() -> String {
+        return "Boundary-\(UUID().uuidString)"
+    }
+    
+    private func mimeType(for path: String) -> String {
+        let url = URL(fileURLWithPath: path)
+        let pathExtension = url.pathExtension
+        
+        if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as NSString, nil)?.takeRetainedValue() {
+            if let mimetype = UTTypeCopyPreferredTagWithClass(uti, kUTTagClassMIMEType)?.takeRetainedValue() {
+                return mimetype as String
+            }
+        }
+        return "application/octet-stream"
     }
     
     

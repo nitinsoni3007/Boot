@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1825C9872108C2820092EEF2 /* VolunteerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825C9862108C2820092EEF2 /* VolunteerField.swift */; };
+		1825C98A2108FE380092EEF2 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825C9892108FE380092EEF2 /* String+Validation.swift */; };
+		1825C98C210911290092EEF2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825C98B210911290092EEF2 /* Data+Extension.swift */; };
+		18774F7D21060FCD001BD003 /* VolunteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18774F7C21060FCD001BD003 /* VolunteerViewController.swift */; };
 		189456E521030E6C00260434 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189456E421030E6C00260434 /* EventDetailsViewController.swift */; };
 		189456E72103346D00260434 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189456E62103346C00260434 /* MapViewController.swift */; };
 		189DDA912102136900823EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDA902102136900823EC3 /* AppDelegate.swift */; };
@@ -84,8 +88,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1825C9862108C2820092EEF2 /* VolunteerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerField.swift; sourceTree = "<group>"; };
+		1825C9892108FE380092EEF2 /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		1825C98B210911290092EEF2 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		18774F7C21060FCD001BD003 /* VolunteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerViewController.swift; sourceTree = "<group>"; };
 		189456E421030E6C00260434 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		189456E62103346C00260434 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1894E0602109BEB0004E6AF6 /* Boot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boot.entitlements; sourceTree = "<group>"; };
 		189DDA8D2102136900823EC3 /* Boot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189DDA902102136900823EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189DDA922102136900823EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +199,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1825C9882108FE380092EEF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1825C9892108FE380092EEF2 /* String+Validation.swift */,
+				1825C98B210911290092EEF2 /* Data+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18774F7B21060EEF001BD003 /* Volunteer */ = {
+			isa = PBXGroup;
+			children = (
+				18774F7C21060FCD001BD003 /* VolunteerViewController.swift */,
+			);
+			path = Volunteer;
+			sourceTree = "<group>";
+		};
 		189DDA842102136900823EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +241,8 @@
 		189DDA8F2102136900823EC3 /* Boot */ = {
 			isa = PBXGroup;
 			children = (
+				1894E0602109BEB0004E6AF6 /* Boot.entitlements */,
+				1825C9882108FE380092EEF2 /* Extensions */,
 				189DDAD921021D7100823EC3 /* ApiService */,
 				189DDACF21021D7100823EC3 /* CollectionCell */,
 				189DDACA21021D7000823EC3 /* Constant */,
@@ -344,6 +372,7 @@
 				189DDAE121021D7100823EC3 /* Title.swift */,
 				189DDAE221021D7100823EC3 /* VideoList.swift */,
 				189DDAE321021D7100823EC3 /* Ward.swift */,
+				1825C9862108C2820092EEF2 /* VolunteerField.swift */,
 			);
 			path = Modle;
 			sourceTree = "<group>";
@@ -366,6 +395,7 @@
 		189DDAED21021D7200823EC3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18774F7B21060EEF001BD003 /* Volunteer */,
 				189DDB322102535700823EC3 /* EventNSchedule */,
 				189DDAEE21021D7200823EC3 /* BootTeam */,
 				189DDAF121021D7200823EC3 /* HomeViewController.swift */,
@@ -560,6 +590,11 @@
 				TargetAttributes = {
 					189DDA8C2102136900823EC3 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					189DDAA32102136A00823EC3 = {
 						CreatedOnToolsVersion = 9.3;
@@ -711,6 +746,8 @@
 				189DDB2021021D7300823EC3 /* BootTeamViewController.swift in Sources */,
 				189DDB0621021D7300823EC3 /* TPKAScrollViewController.m in Sources */,
 				189456E521030E6C00260434 /* EventDetailsViewController.swift in Sources */,
+				18774F7D21060FCD001BD003 /* VolunteerViewController.swift in Sources */,
+				1825C98C210911290092EEF2 /* Data+Extension.swift in Sources */,
 				189DDB0921021D7300823EC3 /* AppParam.swift in Sources */,
 				189DDB1D21021D7300823EC3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				189DDB2C21021D7300823EC3 /* VideoCell.swift in Sources */,
@@ -727,12 +764,14 @@
 				189DDB2221021D7300823EC3 /* LaunchViewController.swift in Sources */,
 				189DDB0C21021D7300823EC3 /* BootDetailTableCell.swift in Sources */,
 				189DDB2721021D7300823EC3 /* VideoViewController.swift in Sources */,
+				1825C9872108C2820092EEF2 /* VolunteerField.swift in Sources */,
 				189DDB1821021D7300823EC3 /* Title.swift in Sources */,
 				189DDB0A21021D7300823EC3 /* ViewBorder.swift in Sources */,
 				189DDA912102136900823EC3 /* AppDelegate.swift in Sources */,
 				189456E72103346D00260434 /* MapViewController.swift in Sources */,
 				189DDB34210253A500823EC3 /* EventNScheduleViewController.swift in Sources */,
 				189DDB0821021D7300823EC3 /* WebServiceActions.swift in Sources */,
+				1825C98A2108FE380092EEF2 /* String+Validation.swift in Sources */,
 				189DDB1021021D7300823EC3 /* TopSliderCell.swift in Sources */,
 				189DDB0F21021D7300823EC3 /* BootTeamCell.swift in Sources */,
 				189DDB1921021D7300823EC3 /* VideoList.swift in Sources */,
@@ -920,13 +959,16 @@
 			baseConfigurationReference = E62A70A40D4930C781DB6629 /* Pods-Boot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boot/Boot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JAC3PD3976;
 				INFOPLIST_FILE = Boot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anon.pickme.Boot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anon.pickme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -938,13 +980,16 @@
 			baseConfigurationReference = B5E6D0ACEEF6392477BBE265 /* Pods-Boot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boot/Boot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JAC3PD3976;
 				INFOPLIST_FILE = Boot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anon.pickme.Boot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anon.pickme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

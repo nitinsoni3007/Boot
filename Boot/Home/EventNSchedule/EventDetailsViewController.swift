@@ -8,16 +8,13 @@
 
 import UIKit
 
-private enum InfoType {
-    case about_us
-    case speakers
-    case notes
+private enum InfoType: Int {
+    case about_us = 0
+    case speakers = 1
+    case notes = 2
 }
 
-class EventDetailsViewController: UIViewController {
-
-    
-    
+class EventDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var lblEventTitle: UILabel!
     @IBOutlet weak var lblStartTime: UILabel!
     @IBOutlet weak var lblEndTime: UILabel!
@@ -29,6 +26,7 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet weak var btnNotes: UIButton!
     var selectedEvent: Event?
     
+    @IBOutlet weak var svDetails: UIScrollView!
     @IBOutlet weak var lblDiscription: UILabel!
     @IBOutlet weak var lblSpeakers: UILabel!
     @IBOutlet weak var lblNotes: UILabel!
@@ -51,27 +49,25 @@ class EventDetailsViewController: UIViewController {
     }
     
     fileprivate func resetContainer(type: InfoType) {
-        viewAbout.isHidden = true
-        viewSpeakers.isHidden = true
-        viewNotes.isHidden = true
+//        viewAbout.isHidden = true
+//        viewSpeakers.isHidden = true
+//        viewNotes.isHidden = true
         btnAboutUs.setTitleColor(UIColor.black, for: .normal)
         btnSpeakers.setTitleColor(UIColor.black, for: .normal)
         btnNotes.setTitleColor(UIColor.black, for: .normal)
         var centerXToMove = underline.center.x
         switch type {
         case .about_us:
-            viewAbout.isHidden = false
             centerXToMove = btnAboutUs.center.x
             btnAboutUs.setTitleColor(UIColor.red, for: .normal)
         case .speakers:
-            viewSpeakers.isHidden = false
             centerXToMove = btnSpeakers.center.x
             btnSpeakers.setTitleColor(UIColor.red, for: .normal)
         case .notes:
-            viewNotes.isHidden = false
             centerXToMove = btnNotes.center.x
             btnNotes.setTitleColor(UIColor.red, for: .normal)
         }
+        svDetails.setContentOffset(CGPoint(x: CGFloat(type.rawValue) * svDetails.bounds.width, y: 0), animated: true)
         let newCenterOfUnderline = CGPoint(x: centerXToMove, y: underline.center.y)
         UIView.animate(withDuration: 0.3) {
             self.underline.center = newCenterOfUnderline
@@ -88,6 +84,12 @@ class EventDetailsViewController: UIViewController {
         lblSpeakers.text = selectedEvent?.speakersName ?? ""
         lblNotes.text = "Please login to get your event pass."
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        svDetails.contentSize = CGSize(width: svDetails.bounds.width * 3, height: svDetails.bounds.height)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,6 +103,14 @@ class EventDetailsViewController: UIViewController {
     }
     
     @IBAction func btnShareAction(_ sender: Any) {
+        var textToShare = selectedEvent?.title ?? "" + "\n"
+        textToShare.append("Start :" + (selectedEvent?.starttime ?? "") + "\n")
+        textToShare.append("End :" + (selectedEvent?.endtime ?? "") + "\n")
+        textToShare.append("Venue :" + (selectedEvent?.location ?? ""))
+        let activityVC = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+        
+        activityVC.popoverPresentationController?.sourceView = sender as! UIButton
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     @IBAction func btnAboutAction(_ sender: Any) {
@@ -113,6 +123,14 @@ class EventDetailsViewController: UIViewController {
     
     @IBAction func btnNotesAction(_ sender: Any) {
         resetContainer(type: .notes)
+    }
+    
+    //MARK: uiscrollview delegate
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageInd = Int(scrollView.contentOffset.x/scrollView.bounds.width)
+        if pageInd < 3 {
+            resetContainer(type: InfoType(rawValue:pageInd)!)
+        }
     }
     
 }

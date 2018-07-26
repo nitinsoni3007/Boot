@@ -13,7 +13,22 @@ class LaunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        ApiService().callApi(strAction: webServiceActions.VolunteerField, strWebType: "GET", params: [:], complition: { (dict) in
+            
+            let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
+            let arrSate = dictSate.object(forKey: "volunteerfield_data") as! NSArray
+            for(_,dict) in  arrSate.enumerated()
+            {
+                let dictVolunteerField:NSMutableDictionary = dict as! NSMutableDictionary
+                let objVolunteerField = VolunteerField()
+                objVolunteerField.vfieldname = dictVolunteerField.object(forKey: "vfieldname") as! String
+                ViewBorder.shareViewBorder.arrVolunteerFields.append(objVolunteerField)
+                
+            }
+            
+        })
+        
         ApiService().callApi(strAction:webServiceActions.Title , strWebType: "GET", params: [:]) { (dict) in
             let dictTitle:NSMutableDictionary = dict as! NSMutableDictionary
             let arrTitle = dictTitle.object(forKey: "title_data") as! NSArray
@@ -25,6 +40,8 @@ class LaunchViewController: UIViewController {
                 ViewBorder.shareViewBorder.arrTitle.append(objTitle)
             }
             
+        }
+        
             ApiService().callApi(strAction: webServiceActions.State, strWebType: "GET", params: [:], complition: { (dict) in
                 
                 let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
@@ -42,6 +59,8 @@ class LaunchViewController: UIViewController {
                 
             })
             
+        
+            
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
@@ -51,8 +70,6 @@ class LaunchViewController: UIViewController {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = nav
             self.window?.makeKeyAndVisible()
-            
-        }
 
         // Do any additional setup after loading the view.
     }
