@@ -216,6 +216,20 @@
 			path = Volunteer;
 			sourceTree = "<group>";
 		};
+		188E5966210A43C7002E04DE /* EFlyer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EFlyer;
+			sourceTree = "<group>";
+		};
+		188E5967210A43C8002E04DE /* OnlineTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnlineTools;
+			sourceTree = "<group>";
+		};
 		189DDA842102136900823EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +409,8 @@
 		189DDAED21021D7200823EC3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				188E5966210A43C7002E04DE /* EFlyer */,
+				188E5967210A43C8002E04DE /* OnlineTools */,
 				18774F7B21060EEF001BD003 /* Volunteer */,
 				189DDB322102535700823EC3 /* EventNSchedule */,
 				189DDAEE21021D7200823EC3 /* BootTeam */,

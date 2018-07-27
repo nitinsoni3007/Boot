@@ -123,21 +123,21 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
     @IBAction func btnAgreementAction(_ sender: Any) {
         if areDataValid() && documentUrl != nil {
             ApiService().callMultiPartAPI(strAction: "Volunteer/insert", strWebType: "POST", params: createParamDict(), filePath: documentUrl!.absoluteString) { (resp) in
-                print("resp = \(resp)")
+//                self.showAlert(withMessage: (resp as! [String:String])["response"] ?? "success")
+                let alert = UIAlertController(title: nil, message: (resp as! [String:String])["response"] ?? "success", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action) in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(alert, animated: false, completion: nil)
             }
         }
     }
     
     
     func createParamDict() -> [String: String] {
-        var params = ["title": btnTitle.title(for: .normal)!, "fname":txtFirstName.text!, "lname": txtLastName.text!, "email": txtEmailAddress.text!, "phone": txtPhoneNumber.text!, "state": btnState.title(for: .normal)!, "acctno": "", "volunteerfield": btnVolunteeringField.title(for: .normal)!, "lga": lgaBasedOnState!.lganame, "aka": "", "ward": selectedWard!.WardName, "state_code": selectedState!.StateCode, "lga_cod": lgaBasedOnState!.lgacode, "ward_code": selectedWard!.WardCode]
-        for val in params.values {
-            if val is String == false {
-                print("value not string: \(val!)")
-            }
-        }
+        let params = ["title": btnTitle.title(for: .normal)!, "fname":txtFirstName.text!, "lname": txtLastName.text!, "email": txtEmailAddress.text!, "phone": txtPhoneNumber.text!, "state": btnState.title(for: .normal)!, "acctno": "", "volunteerfield": btnVolunteeringField.title(for: .normal)!, "lga": lgaBasedOnState!.lganame, "aka": "", "ward": selectedWard!.WardName, "state_code": selectedState!.StateCode, "lga_cod": lgaBasedOnState!.lgacode, "ward_code": selectedWard!.WardCode]
+        
         return params as! [String : String]
-        // “title”,”fname”,”lname”,”email”,”phone”,”state”,”acctno”,”volunteerfield”,”lga”,”aka”,”ward”,”state_code”,”lga_cod”,”ward_code”,”volunteer_file”
     }
     var arrlocalGoverMent = [LocalGoverment]()
     var lgaBasedOnState : LocalGoverment?
@@ -392,7 +392,7 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
     
     func showAlert(withMessage msg: String) {
         let alert = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 

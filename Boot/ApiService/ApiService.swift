@@ -101,9 +101,9 @@ class ApiService: NSObject {
         task.resume()
     }
     
-    func callMultiPartAPI(strAction:String,strWebType:String,params: [String:String], filePath: String, complition:@escaping (Any)->()) {
+    func callMultiPartAPI(strAction:String,strWebType:String,params: [String:String], filePath: String,complition:@escaping (Any)->()) {
         do {
-        let request = try createRequest(params: params, filePath: filePath)
+            let request = try createRequest(actionStr: webServiceActions.BaseUrl + strAction, params: params, filePath: filePath)
             let session = URLSession.shared
             
             let task = session.dataTask(with: request as URLRequest) {
@@ -133,12 +133,12 @@ class ApiService: NSObject {
         }
     }
     
-    func createRequest(params: [String:String], filePath: String) throws -> URLRequest {
+    func createRequest(actionStr: String, params: [String:String], filePath: String) throws -> URLRequest {
         let parameters = params  // build your dictionary however appropriate
         
         let boundary = generateBoundaryString()
         
-        let url = URL(string: "https://example.com/imageupload.php")!
+        let url = URL(string: actionStr)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
@@ -146,10 +146,9 @@ class ApiService: NSObject {
         let path1 = filePath
         //, "volunteer_file": documentUrl?.lastPathComponent ?? "testFile"
         request.httpBody = try createBody(with: parameters, filePathKey: "volunteer_file", paths: [path1], boundary: boundary)
-        
+        print("request desc = \(request.debugDescription)")
         return request
     }
-    
     private func createBody(with parameters: [String: String]?, filePathKey: String, paths: [String], boundary: String) throws -> Data {
         var body = Data()
         
@@ -162,19 +161,19 @@ class ApiService: NSObject {
         }
         
         for path in paths {
-            let url = URL(fileURLWithPath: path)
-            let filename = url.lastPathComponent
+            let url = URL(string: path)
+            let filename = url?.lastPathComponent ?? "default"
             do {
-            let data = try Data(contentsOf: url)
+                let data = try Data(contentsOf: url!)
             let mimetype = mimeType(for: path)
-            
+
             body.append("--\(boundary)\r\n")
-            body.append("Content-Disposition: form-data; name=\"\(filePathKey)\"; filename=\"\(filename)\"\r\n")
-            body.append("Content-Type: \(mimetype)\r\n\r\n")
+            body.append("Content-Disposition: form-data; name=\"\(filePathKey)\"; filename=\"\(filename)\"\r\n")//
+            body.append("Content-Type: \(mimetype)\r\n\r\n")//
             body.append(data)
             body.append("\r\n")
             }catch {
-                
+//
             }
         }
         
