@@ -17,7 +17,7 @@ enum PickerType {
     case ward
 }
 
-class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate {
+class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
 
@@ -110,11 +110,32 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
     }
     
     @IBAction func btnUploadDocumentAction(_ sender: Any) {
-        let importMenu = UIDocumentMenuViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeTXNTextAndMultimediaData)], in: .import)
-        importMenu.delegate = self
-        importMenu.modalPresentationStyle = .formSheet
-        self.present(importMenu, animated: true, completion: nil)
+        let actionSheet = UIAlertController(title: "Import from", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            self.openImagePickerWithOption(sourceType: .camera)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { (action) in
+            self.openImagePickerWithOption(sourceType: .photoLibrary)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Files", style: .default, handler: { (action) in
+            let importMenu = UIDocumentMenuViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeTXNTextAndMultimediaData), String(kUTTypeImage)], in: .import)
+            importMenu.delegate = self
+            importMenu.modalPresentationStyle = .formSheet
+            self.present(importMenu, animated: true, completion: nil)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
     }
+    
+    func openImagePickerWithOption(sourceType: UIImagePickerControllerSourceType) {
+        let ipController = UIImagePickerController()
+        ipController.allowsEditing = false
+//        ipController.cameraCaptureMode = .photo
+        ipController.sourceType = sourceType
+        ipController.delegate = self
+        self.present(ipController, animated: false, completion: nil)
+    }
+    
     @IBAction func btnDeleteFileAction(_ sender: Any) {
         lblUploadedFilename.text = ""
         btnDeleteFile.isHidden = true
@@ -236,6 +257,22 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
         case .ward:
             btnWard.setTitle(titleStr, for: .normal)
         }
+    }
+    
+    //MARK: image picker delegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let img = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let imgData = UIImagePNGRepresentation(img)
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMddHHmmss"
+        let fileName = "\(df.string(from: Date()))" + ".png"
+        lblUploadedFilename.text = fileName
+        addFileToDD(withData: imgData!, fileName: fileName)
+        self.dismiss(animated: true, completion: nil)
     }
     var arrDocumentPicked = [Data]()
     var documentUrl : URL?
