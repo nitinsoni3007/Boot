@@ -172,6 +172,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             let controller = storyboard.instantiateViewController(withIdentifier: "VolunteerViewController") as! VolunteerViewController
             navigationController?.pushViewController(controller, animated: true)
         }
+        else if indexPath.row == 15
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "EFlyrViewController") as! EFlyrViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

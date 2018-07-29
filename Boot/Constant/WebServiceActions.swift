@@ -23,6 +23,7 @@ struct webServiceActions {
     static let LocalGoverment = "nglga"
     static let Ward = "Ngward"
     static let ProfileJoinUs =  "profilejoinus/insert"
+    static let EFlyer = "ebanner"
 }
 
 struct alertKeys {

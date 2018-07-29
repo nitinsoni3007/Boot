@@ -65,6 +65,10 @@
 		189DDB34210253A500823EC3 /* EventNScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB33210253A400823EC3 /* EventNScheduleViewController.swift */; };
 		189DDB362102696D00823EC3 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB352102696D00823EC3 /* EventCell.swift */; };
 		189DDB3821026EFA00823EC3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB3721026EFA00823EC3 /* Event.swift */; };
+		18D3E7A5210E51E400A24164 /* EFlyrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A4210E51E300A24164 /* EFlyrCell.swift */; };
+		18D3E7A8210E527D00A24164 /* EFlyrDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */; };
+		18D3E7A9210E527D00A24164 /* EFlyrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */; };
+		18D3E7AB210E52CC00A24164 /* EFlyr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7AA210E52CC00A24164 /* EFlyr.swift */; };
 		1BFB43F73EBDDBCFF1221A7E /* Pods_BootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6F54CD4401B5E51CAED67D /* Pods_BootTests.framework */; };
 		6CF37275B3A95438FF9E175B /* Pods_BootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF5FFF23EB1E1EF520E256E /* Pods_BootUITests.framework */; };
 		BF008B7D226656E14163F436 /* Pods_Boot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17CC2C03D88D6BBE51790B /* Pods_Boot.framework */; };
@@ -160,6 +164,10 @@
 		189DDB33210253A400823EC3 /* EventNScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNScheduleViewController.swift; sourceTree = "<group>"; };
 		189DDB352102696D00823EC3 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		189DDB3721026EFA00823EC3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		18D3E7A4210E51E300A24164 /* EFlyrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrCell.swift; sourceTree = "<group>"; };
+		18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrDetailViewController.swift; sourceTree = "<group>"; };
+		18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrViewController.swift; sourceTree = "<group>"; };
+		18D3E7AA210E52CC00A24164 /* EFlyr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyr.swift; sourceTree = "<group>"; };
 		25A655227D2EAF69689C09B8 /* Pods-BootTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BootTests/Pods-BootTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C4504067E4235A7A6E96174 /* Pods-BootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BootUITests/Pods-BootUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EF5FFF23EB1E1EF520E256E /* Pods_BootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +227,8 @@
 		188E5966210A43C7002E04DE /* EFlyer */ = {
 			isa = PBXGroup;
 			children = (
+				18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */,
+				18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */,
 			);
 			path = EFlyer;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 				189DDAD021021D7100823EC3 /* BootDetailCell */,
 				189DDAD421021D7100823EC3 /* BootTeamCell */,
 				189DDAD821021D7100823EC3 /* itemCell.swift */,
+				18D3E7A4210E51E300A24164 /* EFlyrCell.swift */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 				189DDAE121021D7100823EC3 /* Title.swift */,
 				189DDAE221021D7100823EC3 /* VideoList.swift */,
 				189DDAE321021D7100823EC3 /* Ward.swift */,
+				18D3E7AA210E52CC00A24164 /* EFlyr.swift */,
 				1825C9862108C2820092EEF2 /* VolunteerField.swift */,
 			);
 			path = Modle;
@@ -757,6 +769,7 @@
 				189DDB0D21021D7300823EC3 /* BootTeamDetailCell.swift in Sources */,
 				189DDB1221021D7300823EC3 /* ApiService.swift in Sources */,
 				189DDB1721021D7300823EC3 /* State.swift in Sources */,
+				18D3E7A8210E527D00A24164 /* EFlyrDetailViewController.swift in Sources */,
 				189DDA932102136900823EC3 /* ViewController.swift in Sources */,
 				189DDB1E21021D7300823EC3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				189DDB1421021D7300823EC3 /* BootTeam.swift in Sources */,
@@ -768,7 +781,9 @@
 				18774F7D21060FCD001BD003 /* VolunteerViewController.swift in Sources */,
 				1825C98C210911290092EEF2 /* Data+Extension.swift in Sources */,
 				189DDB0921021D7300823EC3 /* AppParam.swift in Sources */,
+				18D3E7AB210E52CC00A24164 /* EFlyr.swift in Sources */,
 				189DDB1D21021D7300823EC3 /* TPKeyboardAvoidingTableView.m in Sources */,
+				18D3E7A9210E527D00A24164 /* EFlyrViewController.swift in Sources */,
 				189DDB2C21021D7300823EC3 /* VideoCell.swift in Sources */,
 				189DDB0721021D7300823EC3 /* TPKATableViewController.m in Sources */,
 				189DDB0B21021D7300823EC3 /* BootDetailScrollTopCell.swift in Sources */,
@@ -781,6 +796,7 @@
 				189DDB2621021D7300823EC3 /* RegistrationViewController.swift in Sources */,
 				189DDB1C21021D7300823EC3 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				189DDB2221021D7300823EC3 /* LaunchViewController.swift in Sources */,
+				18D3E7A5210E51E400A24164 /* EFlyrCell.swift in Sources */,
 				189DDB0C21021D7300823EC3 /* BootDetailTableCell.swift in Sources */,
 				189DDB2721021D7300823EC3 /* VideoViewController.swift in Sources */,
 				1825C9872108C2820092EEF2 /* VolunteerField.swift in Sources */,

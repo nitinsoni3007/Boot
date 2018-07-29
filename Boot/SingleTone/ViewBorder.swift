@@ -62,5 +62,13 @@ class ViewBorder: NSObject {
         objViw.present(activityVC, animated: true, completion: nil)
     }
     
+    func shareImage(imgComman:UIImage, objView:UIViewController)
+    {
+        let imageShare = [imgComman]
+        let activityViewController = UIActivityViewController(activityItems: imageShare , applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = objView.view
+        objView.present(activityViewController, animated: true, completion: nil)
+    }
+    
 
 }
