@@ -29,7 +29,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.items =  [["imgName":"ManiFesto.png", "name":"ManiFesto"],["imgName":"meet_our_team.png", "name":"BootTeam"],["imgName":"our_policy_video.png", "name":"VideoManiFesto"],["imgName":"policy_forum.png", "name":"PolicyForm"],["imgName":"join_us.png", "name":"JoinUs"],["imgName":"news_icon.png", "name":"Latest"],["imgName":"aboutus.png", "name":"AboutUs"],["imgName":"facebook.png", "name":"SocialMedia"],["imgName":"youtube.png", "name":"VideoGallary"],["imgName":"donate.png", "name":"Finance"],["imgName":"social_feeds.png", "name":"SocialFeeds"],["imgName":"event_schedule.png", "name":"Event/Shedule"],["imgName":"volunteer.png", "name":"Volunteer"],["imgName":"my_profile.png", "name":"MyProfile"],["imgName":"faq.png", "name":"FAQs"],["imgName":"e_flyer.png", "name":"e-Flyer"],["imgName":"online_tools.png", "name":"Online Tools"],["imgName":"share.png", "name":"Share"]]
+        self.items =  [["imgName":"ManiFesto.png", "name":"ManiFesto"],["imgName":"meet_our_team.png", "name":"BootTeam"],["imgName":"our_policy_video.png", "name":"VideoManiFesto"],["imgName":"policy_forum.png", "name":"PolicyForm"],["imgName":"join_us.png", "name":"JoinUs"],["imgName":"news_icon.png", "name":"Latest"],["imgName":"aboutus.png", "name":"AboutUs"],["imgName":"facebook.png", "name":"SocialMedia"],["imgName":"youtube.png", "name":"VideoGallary"],["imgName":"donate.png", "name":"Finance"],["imgName":"social_feeds.png", "name":"SocialFeeds"],["imgName":"event_schedule.png", "name":"Event/Shedule"],["imgName":"volunteer.png", "name":"Volunteer"],["imgName":"my_profile.png", "name":"MyProfile"],["imgName":"faq.png", "name":"FAQs"],["imgName":"e_flyer.png", "name":"e-Flyer"],["imgName":"online_tools.png", "name":"Online Tools"],["imgName":"share.png", "name":"Share"],["imgName":"feedback.png", "name":"Feedback"],["imgName":"vote.png", "name":"VoteWare"],["imgName":"help_desk.png", "name":"Help Desk"]]
         
         
        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(moveToNextPageSrollTop), userInfo: nil, repeats: true)
@@ -108,7 +108,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+        return items.count
     }
     
     // make a cell for each cell index path
@@ -188,6 +188,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "EFlyrViewController") as! EFlyrViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
+        else if indexPath.row == 16
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "OnlineToolsViewController") as! OnlineToolsViewController
             navigationController?.pushViewController(controller, animated: true)
         }
     }

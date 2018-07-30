@@ -24,6 +24,7 @@ struct WebServiceConstans {
     static let Ward = "Ngward"
     static let ProfileJoinUs =  "profilejoinus/insert"
     static let ProfileLogin = "profilejoinus/login"
+    static let OnlineTools = "OnlineTool"
     static let EFlyer = "ebanner"
     static let kAccountNumber = "acctno"
     static let kIsVoted = "is_voted"
