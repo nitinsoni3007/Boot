@@ -160,6 +160,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             let controller = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
             self.navigationController?.pushViewController(controller, animated: true)
         }
+        else if indexPath.row == 6
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
         else if indexPath.row == 11
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
