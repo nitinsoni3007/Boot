@@ -17,7 +17,6 @@ class AboutUsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var svMain: UIScrollView!
     @IBOutlet weak var tblWhoWeAre: UITableView!
     @IBOutlet weak var tblPhilosophy: UITableView!
-    var arrData = [AnyObject]()
     var arrIntro = [Intro]()
     var arrPhilosophy = [Philosophy]()
     override func viewDidLoad() {

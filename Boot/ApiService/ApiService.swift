@@ -15,7 +15,7 @@ class ApiService: NSObject {
     {
        
         print(params)
-        let request = NSMutableURLRequest(url: NSURL(string: webServiceActions.BaseUrl + strAction)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: WebServiceConstans.BaseUrl + strAction)! as URL)
         let session = URLSession.shared
         if strWebType == "POST"
         {
@@ -65,7 +65,7 @@ class ApiService: NSObject {
     func callApiPost(strAction:String,strWebType:String,paramsString: String, complition:@escaping (Any)->())
     {
         
-        let request = NSMutableURLRequest(url: NSURL(string: webServiceActions.BaseUrl + strAction)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: WebServiceConstans.BaseUrl + strAction)! as URL)
         let session = URLSession.shared
        
             request.httpMethod = "POST"
@@ -103,7 +103,7 @@ class ApiService: NSObject {
     
     func callMultiPartAPI(strAction:String,strWebType:String,params: [String:String], filePath: String,complition:@escaping (Any)->()) {
         do {
-            let request = try createRequest(actionStr: webServiceActions.BaseUrl + strAction, params: params, filePath: filePath)
+            let request = try createRequest(actionStr: WebServiceConstans.BaseUrl + strAction, params: params, filePath: filePath)
             let session = URLSession.shared
             
             let task = session.dataTask(with: request as URLRequest) {

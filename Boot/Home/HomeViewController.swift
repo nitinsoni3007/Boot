@@ -166,6 +166,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             let controller = storyboard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
             self.navigationController?.pushViewController(controller, animated: true)
         }
+        else if indexPath.row == 9
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "FinanceViewController") as! FinanceViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
         else if indexPath.row == 11
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -197,7 +203,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     {
         
         ActivityController().showActivityIndicator(uiView: self.view)
-        ApiService().getApplicationParam(strAction: webServiceActions.APP_PARAMETER, strwbType: "GET", dict: [:]) { (dict) in
+        ApiService().getApplicationParam(strAction: WebServiceConstans.APP_PARAMETER, strwbType: "GET", dict: [:]) { (dict) in
             
             ActivityController().hideActivityIndicator(uiView: self.view)
             var dictAppParam:NSMutableDictionary = NSMutableDictionary()
@@ -238,7 +244,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     
     func getAddBar()
     {
-        ApiService().getApplicationParam(strAction: webServiceActions.Addbar, strwbType: "GET", dict: [:]) { (dictAppBar) in
+        ApiService().getApplicationParam(strAction: WebServiceConstans.Addbar, strwbType: "GET", dict: [:]) { (dictAppBar) in
             
             let arrTemp  =   dictAppBar.object(forKey: "add_bar") as! NSArray
             

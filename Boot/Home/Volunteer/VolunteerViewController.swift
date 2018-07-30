@@ -168,7 +168,7 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
             
             let postString = "statename=\(stateName)"
             
-            ApiService().callApiPost(strAction: webServiceActions.LocalGoverment, strWebType: "POST", paramsString: postString) { (dict) in
+            ApiService().callApiPost(strAction: WebServiceConstans.LocalGoverment, strWebType: "POST", paramsString: postString) { (dict) in
                 
                 let dictTemp:NSMutableDictionary = dict as! NSMutableDictionary
                 
@@ -206,7 +206,7 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
         let strWardParam = "LGACode=\(lgaCode)"
         print(strWardParam)
         
-        ApiService().callApiPost(strAction: webServiceActions.Ward, strWebType: "", paramsString: strWardParam, complition: { (dict) in
+        ApiService().callApiPost(strAction: WebServiceConstans.Ward, strWebType: "", paramsString: strWardParam, complition: { (dict) in
             
             let dictTemp:NSMutableDictionary = dict as! NSMutableDictionary
             
@@ -337,7 +337,7 @@ class VolunteerViewController: UIViewController, UIScrollViewDelegate, UIPickerV
                 if self.tappedView is UIButton {
                 self.viewPickerSuper.frame = CGRect(x: 0, y: window.frame.size.height , width: window.frame.size.width, height: self.viewPickerSuper.frame.size.height)
                 }
-                self.svMain.frame = self.oldSVFrame!
+                self.svMain.frame = self.oldSVFrame ?? self.svMain.frame
             })
         }
     }

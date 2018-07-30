@@ -14,7 +14,7 @@ class LaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ApiService().callApi(strAction: webServiceActions.VolunteerField, strWebType: "GET", params: [:], complition: { (dict) in
+        ApiService().callApi(strAction: WebServiceConstans.VolunteerField, strWebType: "GET", params: [:], complition: { (dict) in
             
             let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
             let arrSate = dictSate.object(forKey: "volunteerfield_data") as! NSArray
@@ -29,7 +29,7 @@ class LaunchViewController: UIViewController {
             
         })
         
-        ApiService().callApi(strAction:webServiceActions.Title , strWebType: "GET", params: [:]) { (dict) in
+        ApiService().callApi(strAction:WebServiceConstans.Title , strWebType: "GET", params: [:]) { (dict) in
             let dictTitle:NSMutableDictionary = dict as! NSMutableDictionary
             let arrTitle = dictTitle.object(forKey: "title_data") as! NSArray
             for (_,dict) in arrTitle.enumerated()
@@ -42,7 +42,7 @@ class LaunchViewController: UIViewController {
             
         }
         
-            ApiService().callApi(strAction: webServiceActions.State, strWebType: "GET", params: [:], complition: { (dict) in
+            ApiService().callApi(strAction: WebServiceConstans.State, strWebType: "GET", params: [:], complition: { (dict) in
                 
                 let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
                 let arrSate = dictSate.object(forKey: "ngstates_data") as! NSArray

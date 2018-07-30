@@ -62,7 +62,7 @@ class EFlyrViewController: UIViewController,UIScrollViewDelegate,UICollectionVie
     func getEFlyer()
     {
         ActivityController().showActivityIndicator(uiView: self.view)
-        ApiService().callApi(strAction: webServiceActions.EFlyer, strWebType:"GET" , params: [:]) { (dict) in
+        ApiService().callApi(strAction: WebServiceConstans.EFlyer, strWebType:"GET" , params: [:]) { (dict) in
         
             ActivityController().hideActivityIndicator(uiView: self.view)
             let dictTemp:NSMutableDictionary =  dict as! NSMutableDictionary

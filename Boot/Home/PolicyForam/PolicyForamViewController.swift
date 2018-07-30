@@ -27,7 +27,7 @@ class PolicyForamViewController: UIViewController,UITableViewDelegate, UITableVi
     func callGetPolicyData()
     {
         ActivityController().showActivityIndicator(uiView: self.view)
-        ApiService().getPolicyData(strAction: webServiceActions.Policy, strwbType: "POST", dict: [:]) { (dict) in
+        ApiService().getPolicyData(strAction: WebServiceConstans.Policy, strwbType: "POST", dict: [:]) { (dict) in
             
             ActivityController().hideActivityIndicator(uiView: self.view)
             let arrTempPolicy = dict.object(forKey: "policy_data") as! NSArray

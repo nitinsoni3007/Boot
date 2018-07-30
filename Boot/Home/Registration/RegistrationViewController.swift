@@ -456,7 +456,7 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate, UIPicker
         
         let postString = "statename=\(self.stateName)"
         
-        ApiService().callApiPost(strAction: webServiceActions.LocalGoverment, strWebType: "POST", paramsString: postString) { (dict) in
+        ApiService().callApiPost(strAction: WebServiceConstans.LocalGoverment, strWebType: "POST", paramsString: postString) { (dict) in
             
             let dictTemp:NSMutableDictionary = dict as! NSMutableDictionary
             
@@ -483,7 +483,7 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate, UIPicker
             
             let strWardParam = "LGACode=\(objLoclgoverMent.lgacode!)"
             print(strWardParam)
-            ApiService().callApiPost(strAction: webServiceActions.Ward, strWebType: "", paramsString: strWardParam, complition: { (dict) in
+            ApiService().callApiPost(strAction: WebServiceConstans.Ward, strWebType: "", paramsString: strWardParam, complition: { (dict) in
                 
                 let dictTemp:NSMutableDictionary = dict as! NSMutableDictionary
                 
@@ -526,7 +526,7 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate, UIPicker
         
         print(postString)
         ActivityController().showActivityIndicator(uiView: self.view)
-        ApiService().callApiPost(strAction: webServiceActions.ProfileJoinUs, strWebType: "", paramsString: postString) { (dict) in
+        ApiService().callApiPost(strAction: WebServiceConstans.ProfileJoinUs, strWebType: "", paramsString: postString) { (dict) in
             print(dict)
             ActivityController().hideActivityIndicator(uiView: self.view)
         }

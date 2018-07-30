@@ -41,7 +41,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func getVideoList()
     {
         ActivityController().showActivityIndicator(uiView: self.view)
-        ApiService().callApi(strAction:webServiceActions.Video , strWebType: "GET", params: [:]) { (dict) in
+        ApiService().callApi(strAction:WebServiceConstans.Video , strWebType: "GET", params: [:]) { (dict) in
             
             let dict:NSMutableDictionary = dict as! NSMutableDictionary
             print(dict)

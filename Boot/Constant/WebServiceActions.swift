@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct webServiceActions {
+struct WebServiceConstans {
     
      //static let BaseUrl = "http://www.adenuga.org/BOOT_Event/index.php/"
     static let BaseUrl = "https://www.boot.org.ng/boot_test/index.php/"
@@ -23,7 +23,11 @@ struct webServiceActions {
     static let LocalGoverment = "nglga"
     static let Ward = "Ngward"
     static let ProfileJoinUs =  "profilejoinus/insert"
+    static let ProfileLogin = "profilejoinus/login"
     static let EFlyer = "ebanner"
+    static let kAccountNumber = "acctno"
+    static let kIsVoted = "is_voted"
+    static let kIsLiked = "is_liked"
 }
 
 struct alertKeys {

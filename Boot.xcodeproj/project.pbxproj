@@ -69,6 +69,8 @@
 		18C34D8F210EEC100000AB22 /* SecondStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C34D8E210EEC100000AB22 /* SecondStoryBoard.storyboard */; };
 		18C34D92210EF5690000AB22 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D90210EF5680000AB22 /* Intro.swift */; };
 		18C34D93210EF5690000AB22 /* Philosophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D91210EF5680000AB22 /* Philosophy.swift */; };
+		18C34D96210F08C30000AB22 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D95210F08C30000AB22 /* FinanceViewController.swift */; };
+		18C34D98210F0FBB0000AB22 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D97210F0FBA0000AB22 /* Donate.swift */; };
 		18D3E7A5210E51E400A24164 /* EFlyrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A4210E51E300A24164 /* EFlyrCell.swift */; };
 		18D3E7A8210E527D00A24164 /* EFlyrDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */; };
 		18D3E7A9210E527D00A24164 /* EFlyrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */; };
@@ -172,6 +174,8 @@
 		18C34D8E210EEC100000AB22 /* SecondStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryBoard.storyboard; sourceTree = "<group>"; };
 		18C34D90210EF5680000AB22 /* Intro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		18C34D91210EF5680000AB22 /* Philosophy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosophy.swift; sourceTree = "<group>"; };
+		18C34D95210F08C30000AB22 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		18C34D97210F0FBA0000AB22 /* Donate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 		18D3E7A4210E51E300A24164 /* EFlyrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrCell.swift; sourceTree = "<group>"; };
 		18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrDetailViewController.swift; sourceTree = "<group>"; };
 		18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 		189DDADB21021D7100823EC3 /* Modle */ = {
 			isa = PBXGroup;
 			children = (
+				18C34D97210F0FBA0000AB22 /* Donate.swift */,
 				18C34D90210EF5680000AB22 /* Intro.swift */,
 				18C34D91210EF5680000AB22 /* Philosophy.swift */,
 				189DDB3721026EFA00823EC3 /* Event.swift */,
@@ -432,6 +437,7 @@
 		189DDAED21021D7200823EC3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18C34D94210F085F0000AB22 /* Finance */,
 				18C34D8B210EEBA20000AB22 /* AboutUs */,
 				188E5966210A43C7002E04DE /* EFlyer */,
 				188E5967210A43C8002E04DE /* OnlineTools */,
@@ -541,6 +547,14 @@
 				18C34D8C210EEBC20000AB22 /* AboutUsViewController.swift */,
 			);
 			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		18C34D94210F085F0000AB22 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				18C34D95210F08C30000AB22 /* FinanceViewController.swift */,
+			);
+			path = Finance;
 			sourceTree = "<group>";
 		};
 		42A705314E8BD8E65A457871 /* Frameworks */ = {
@@ -833,8 +847,10 @@
 				1825C98A2108FE380092EEF2 /* String+Validation.swift in Sources */,
 				189DDB1021021D7300823EC3 /* TopSliderCell.swift in Sources */,
 				189DDB0F21021D7300823EC3 /* BootTeamCell.swift in Sources */,
+				18C34D98210F0FBB0000AB22 /* Donate.swift in Sources */,
 				189DDB1921021D7300823EC3 /* VideoList.swift in Sources */,
 				189DDB2121021D7300823EC3 /* HomeViewController.swift in Sources */,
+				18C34D96210F08C30000AB22 /* FinanceViewController.swift in Sources */,
 				189DDB0E21021D7300823EC3 /* BootTamTableCell.swift in Sources */,
 				189DDB1F21021D7300823EC3 /* BootDetailViewController.swift in Sources */,
 				189DDB362102696D00823EC3 /* EventCell.swift in Sources */,
