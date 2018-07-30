@@ -6,7 +6,7 @@ target 'Boot' do
   use_frameworks!
 
   # Pods for Boot
-pod 'SwiftyJSON'
+    pod 'SwiftyJSON'
 
   target 'BootTests' do
     inherit! :search_paths
