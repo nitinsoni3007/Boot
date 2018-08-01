@@ -184,6 +184,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             let controller = storyboard.instantiateViewController(withIdentifier: "VolunteerViewController") as! VolunteerViewController
             navigationController?.pushViewController(controller, animated: true)
         }
+        else if indexPath.row == 14
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "FAQViewController") as! FAQViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
         else if indexPath.row == 15
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -194,6 +200,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         {
             let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "OnlineToolsViewController") as! OnlineToolsViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
+        else if indexPath.row == 20
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "HelpDeskViewController") as! HelpDeskViewController
             navigationController?.pushViewController(controller, animated: true)
         }
     }
