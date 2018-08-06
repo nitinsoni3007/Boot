@@ -39,7 +39,7 @@ class MainFestoViewController: UIViewController, UITableViewDelegate, UITableVie
         ApiService().getPolicyData(strAction: WebServiceConstans.Policy, strwbType: "POST", dict: [:]) { (dict) in
             
             ActivityController().hideActivityIndicator(uiView: self.view)
-            let arrTempPolicy = dict.object(forKey: "policy_data") as! NSArray
+            let arrTempPolicy = dict.object(forKey: "policy_data") as? NSArray ?? NSArray()
             
             for (_,dict) in arrTempPolicy.enumerated()
             {

@@ -203,7 +203,7 @@ class BootTeamViewController: UIViewController,UICollectionViewDelegate,UICollec
             
             ActivityController().hideActivityIndicator(uiView: self.view)
             let dictTemp =  dictBootTeam
-            let arrTemp = dictTemp.object(forKey: "ourteam_data") as! NSArray
+            let arrTemp = dictTemp.object(forKey: "ourteam_data") as? NSArray ?? NSArray()
             
             for (_, dict) in arrTemp.enumerated()
             {
@@ -223,7 +223,7 @@ class BootTeamViewController: UIViewController,UICollectionViewDelegate,UICollec
                 self.arrBootTeam.append(objBootTeam)
             }
             
-            let arrTempcouncil_data = dictTemp.object(forKey: "council_data") as! NSArray
+            let arrTempcouncil_data = dictTemp.object(forKey: "council_data") as? NSArray ?? NSArray()
             
             for (_, dict) in arrTempcouncil_data.enumerated()
             {
@@ -243,7 +243,7 @@ class BootTeamViewController: UIViewController,UICollectionViewDelegate,UICollec
                 self.arrcouncil_data.append(objBootTeam)
             }
             
-            let arrOfficers_model = dictTemp.object(forKey: "Officers_model") as! NSArray
+            let arrOfficers_model = dictTemp.object(forKey: "Officers_model") as? NSArray ?? NSArray()
             
             for (_, dict) in arrOfficers_model.enumerated()
             {

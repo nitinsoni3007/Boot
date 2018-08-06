@@ -16,7 +16,7 @@ class LaunchViewController: UIViewController {
         
         ApiService().callApi(strAction: WebServiceConstans.VolunteerField, strWebType: "GET", params: [:], complition: { (dict) in
             
-            let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
+            if let dictSate:NSMutableDictionary =  dict as? NSMutableDictionary {
             let arrSate = dictSate.object(forKey: "volunteerfield_data") as! NSArray
             for(_,dict) in  arrSate.enumerated()
             {
@@ -26,11 +26,12 @@ class LaunchViewController: UIViewController {
                 ViewBorder.shareViewBorder.arrVolunteerFields.append(objVolunteerField)
                 
             }
+            }
             
         })
         
         ApiService().callApi(strAction:WebServiceConstans.Title , strWebType: "GET", params: [:]) { (dict) in
-            let dictTitle:NSMutableDictionary = dict as! NSMutableDictionary
+            if let dictTitle:NSMutableDictionary = dict as? NSMutableDictionary {
             let arrTitle = dictTitle.object(forKey: "title_data") as! NSArray
             for (_,dict) in arrTitle.enumerated()
             {
@@ -39,12 +40,12 @@ class LaunchViewController: UIViewController {
                 objTitle.titlename = dictTemp.object(forKey: "titlename") as! String
                 ViewBorder.shareViewBorder.arrTitle.append(objTitle)
             }
-            
+            }
         }
         
             ApiService().callApi(strAction: WebServiceConstans.State, strWebType: "GET", params: [:], complition: { (dict) in
                 
-                let dictSate:NSMutableDictionary =  dict as! NSMutableDictionary
+                if let dictSate:NSMutableDictionary =  dict as? NSMutableDictionary {
                 let arrSate = dictSate.object(forKey: "ngstates_data") as! NSArray
                 for(_,dict) in  arrSate.enumerated()
                 {
@@ -56,8 +57,25 @@ class LaunchViewController: UIViewController {
                     ViewBorder.shareViewBorder.arrState.append(objState)
                     
                 }
-                
+                }
             })
+        
+        ApiService().callApi(strAction: WebServiceConstans.AdminIEMINumber, strWebType: "GET", params: [:], complition: { (dict) in
+            
+            if let dictSate:NSMutableDictionary =  dict as? NSMutableDictionary {
+                let arrDicts = dictSate.object(forKey: "response") as! NSArray
+                let flag = arrDicts.contains(where: { (dict) -> Bool in
+                    return (dict as! [String: String])["token_passkey"] == UIDevice.current.identifierForVendor!.uuidString
+                })
+                if flag {
+                    UserDefaults.standard.set(true, forKey: WebServiceConstans.kIsAdmin)
+                }else {
+                    UserDefaults.standard.set(false, forKey: WebServiceConstans.kIsAdmin)
+                }
+            }
+        })
+        
+        //https://www.boot.org.ng/boot_test/index.php/AdminImeiNumber
             
         
             

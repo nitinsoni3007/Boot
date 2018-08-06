@@ -184,6 +184,12 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             let controller = storyboard.instantiateViewController(withIdentifier: "VolunteerViewController") as! VolunteerViewController
             navigationController?.pushViewController(controller, animated: true)
         }
+        else if indexPath.row == 13
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MyProfileViewController") as! MyProfileViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
         else if indexPath.row == 14
         {
             let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
@@ -200,6 +206,20 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         {
             let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "OnlineToolsViewController") as! OnlineToolsViewController
+            navigationController?.pushViewController(controller, animated: true)
+        }
+        else if indexPath.row == 17
+        {
+            let textToShare = "<html><body>Hi there, I joined the BOOT Party and I am using the BOOT Party iOS app.<br>The BOOT Party is a new political leadership system with breath of fresh ari, vision and deremination to redeem the Nigerian Dreams.<br>Getinvolved! Join the BOOT party <a href='https://www.BOOT.org.ng'>BOOT</a>.<br>Download BOOT Party app on your Mobile device.<br><b>BOOT Party!\nBecause Of Our Tomorrow!</b></body></html>"
+
+            let activityController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+            activityController.popoverPresentationController?.sourceView = self.view
+            self.present(activityController, animated: true, completion: nil)
+        }
+        else if indexPath.row == 19
+        {
+            let storyboard = UIStoryboard(name: "SecondStoryBoard", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "VoteWareViewController") as! VoteWareViewController
             navigationController?.pushViewController(controller, animated: true)
         }
         else if indexPath.row == 20
@@ -224,8 +244,10 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         ApiService().getApplicationParam(strAction: WebServiceConstans.APP_PARAMETER, strwbType: "GET", dict: [:]) { (dict) in
             
             ActivityController().hideActivityIndicator(uiView: self.view)
-            var dictAppParam:NSMutableDictionary = NSMutableDictionary()
-            dictAppParam = dict.object(forKey:"applicationparameters_data") as! NSMutableDictionary
+//            var dictAppParam:NSMutableDictionary = NSMutableDictionary()
+            guard let dictAppParam = dict.object(forKey:"applicationparameters_data") as? NSMutableDictionary else {
+                return
+            }
             
             AppParam.shareAppParam.logo_placeholder =  dictAppParam.object(forKey: "logo_placeholder") as! String
             

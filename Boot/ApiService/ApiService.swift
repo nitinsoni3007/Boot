@@ -204,7 +204,7 @@ class ApiService: NSObject {
     {
         self.callApi(strAction: strAction, strWebType: strwbType, params: dict as! Dictionary<String,String>) { (dict) in
             
-            complition(dict as! NSMutableDictionary)
+            complition(dict as? NSMutableDictionary ?? NSMutableDictionary())
         }
     }
     
@@ -213,7 +213,7 @@ class ApiService: NSObject {
     {
         self.callApi(strAction: strAction, strWebType: strwbType, params: dict as! Dictionary<String, String>) { (dict) in
          
-            complition(dict as! NSMutableDictionary)
+            complition(dict as? NSMutableDictionary ?? NSMutableDictionary())
         }
     }
     
@@ -223,7 +223,7 @@ class ApiService: NSObject {
     {
         self.callApi(strAction: strAction, strWebType: strwbType, params: dict as! Dictionary<String, String>) { (dict) in
             
-            complition(dict as! NSMutableDictionary)
+            complition(dict as? NSMutableDictionary ?? NSMutableDictionary())
         }
     }
     

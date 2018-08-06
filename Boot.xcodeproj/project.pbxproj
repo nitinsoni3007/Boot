@@ -69,6 +69,9 @@
 		189DDB34210253A500823EC3 /* EventNScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB33210253A400823EC3 /* EventNScheduleViewController.swift */; };
 		189DDB362102696D00823EC3 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB352102696D00823EC3 /* EventCell.swift */; };
 		189DDB3821026EFA00823EC3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DDB3721026EFA00823EC3 /* Event.swift */; };
+		189ED1D62114CF40001A0D80 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189ED1D52114CF40001A0D80 /* Admin.swift */; };
+		18A039C7211469340027063E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A039C6211469340027063E /* MyProfileViewController.swift */; };
+		18C310872115632000D649A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C310862115632000D649A0 /* LoginViewController.swift */; };
 		18C34D8F210EEC100000AB22 /* SecondStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C34D8E210EEC100000AB22 /* SecondStoryBoard.storyboard */; };
 		18C34D92210EF5690000AB22 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D90210EF5680000AB22 /* Intro.swift */; };
 		18C34D96210F08C30000AB22 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D95210F08C30000AB22 /* FinanceViewController.swift */; };
@@ -76,6 +79,14 @@
 		18C34D9B210F44780000AB22 /* OnlineToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D9A210F44780000AB22 /* OnlineToolsViewController.swift */; };
 		18C34D9D210F458D0000AB22 /* OnlineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D9C210F458D0000AB22 /* OnlineTool.swift */; };
 		18C34D9F210F4D650000AB22 /* OnlinToolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C34D9E210F4D650000AB22 /* OnlinToolDetailViewController.swift */; };
+		18D0692C21181356008450C0 /* BallotLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0692B21181356008450C0 /* BallotLike.swift */; };
+		18D0692E2118253C008450C0 /* ElectivePositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0692D2118253C008450C0 /* ElectivePositionsViewController.swift */; };
+		18D06930211828AD008450C0 /* ElectivePositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0692F211828AD008450C0 /* ElectivePositionCell.swift */; };
+		18D0693221182A7D008450C0 /* ElectivePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0693121182A7D008450C0 /* ElectivePosition.swift */; };
+		18D0693421182BFB008450C0 /* ImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0693321182BFB008450C0 /* ImageView+extension.swift */; };
+		18D06936211862DA008450C0 /* EBallotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D06935211862DA008450C0 /* EBallotCell.swift */; };
+		18D069382118630B008450C0 /* EBallotPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D069372118630B008450C0 /* EBallotPaperViewController.swift */; };
+		18D0693A21187E9E008450C0 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0693921187E9D008450C0 /* Candidate.swift */; };
 		18D3E7A5210E51E400A24164 /* EFlyrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A4210E51E300A24164 /* EFlyrCell.swift */; };
 		18D3E7A8210E527D00A24164 /* EFlyrDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */; };
 		18D3E7A9210E527D00A24164 /* EFlyrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */; };
@@ -83,6 +94,7 @@
 		18E74853210F5C100042F5F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E74852210F5C100042F5F1 /* AboutUsViewController.swift */; };
 		18E74855210F5C210042F5F1 /* Philosophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E74854210F5C210042F5F1 /* Philosophy.swift */; };
 		18E74858210F8B180042F5F1 /* HelpDeskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E74857210F8B180042F5F1 /* HelpDeskViewController.swift */; };
+		18F3CEB321143B7000D78BC1 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3CEB221143B7000D78BC1 /* FeedbackViewController.swift */; };
 		1BFB43F73EBDDBCFF1221A7E /* Pods_BootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6F54CD4401B5E51CAED67D /* Pods_BootTests.framework */; };
 		6CF37275B3A95438FF9E175B /* Pods_BootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF5FFF23EB1E1EF520E256E /* Pods_BootUITests.framework */; };
 		BF008B7D226656E14163F436 /* Pods_Boot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17CC2C03D88D6BBE51790B /* Pods_Boot.framework */; };
@@ -182,6 +194,9 @@
 		189DDB33210253A400823EC3 /* EventNScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNScheduleViewController.swift; sourceTree = "<group>"; };
 		189DDB352102696D00823EC3 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		189DDB3721026EFA00823EC3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		189ED1D52114CF40001A0D80 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		18A039C6211469340027063E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		18C310862115632000D649A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18C34D8E210EEC100000AB22 /* SecondStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryBoard.storyboard; sourceTree = "<group>"; };
 		18C34D90210EF5680000AB22 /* Intro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		18C34D95210F08C30000AB22 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +204,14 @@
 		18C34D9A210F44780000AB22 /* OnlineToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineToolsViewController.swift; sourceTree = "<group>"; };
 		18C34D9C210F458D0000AB22 /* OnlineTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineTool.swift; sourceTree = "<group>"; };
 		18C34D9E210F4D650000AB22 /* OnlinToolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlinToolDetailViewController.swift; sourceTree = "<group>"; };
+		18D0692B21181356008450C0 /* BallotLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallotLike.swift; sourceTree = "<group>"; };
+		18D0692D2118253C008450C0 /* ElectivePositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectivePositionsViewController.swift; sourceTree = "<group>"; };
+		18D0692F211828AD008450C0 /* ElectivePositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectivePositionCell.swift; sourceTree = "<group>"; };
+		18D0693121182A7D008450C0 /* ElectivePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectivePosition.swift; sourceTree = "<group>"; };
+		18D0693321182BFB008450C0 /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
+		18D06935211862DA008450C0 /* EBallotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBallotCell.swift; sourceTree = "<group>"; };
+		18D069372118630B008450C0 /* EBallotPaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBallotPaperViewController.swift; sourceTree = "<group>"; };
+		18D0693921187E9D008450C0 /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		18D3E7A4210E51E300A24164 /* EFlyrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrCell.swift; sourceTree = "<group>"; };
 		18D3E7A6210E527D00A24164 /* EFlyrDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrDetailViewController.swift; sourceTree = "<group>"; };
 		18D3E7A7210E527D00A24164 /* EFlyrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFlyrViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +219,7 @@
 		18E74852210F5C100042F5F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		18E74854210F5C210042F5F1 /* Philosophy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosophy.swift; sourceTree = "<group>"; };
 		18E74857210F8B180042F5F1 /* HelpDeskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskViewController.swift; sourceTree = "<group>"; };
+		18F3CEB221143B7000D78BC1 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		25A655227D2EAF69689C09B8 /* Pods-BootTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BootTests/Pods-BootTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C4504067E4235A7A6E96174 /* Pods-BootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BootUITests/Pods-BootUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EF5FFF23EB1E1EF520E256E /* Pods_BootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +264,7 @@
 			children = (
 				1825C9892108FE380092EEF2 /* String+Validation.swift */,
 				1825C98B210911290092EEF2 /* Data+Extension.swift */,
+				18D0693321182BFB008450C0 /* ImageView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				188E8085211064D10037AC30 /* VoteWareViewController.swift */,
+				18D0692D2118253C008450C0 /* ElectivePositionsViewController.swift */,
+				18D069372118630B008450C0 /* EBallotPaperViewController.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -392,6 +419,8 @@
 				189DDAD421021D7100823EC3 /* BootTeamCell */,
 				189DDAD821021D7100823EC3 /* itemCell.swift */,
 				18D3E7A4210E51E300A24164 /* EFlyrCell.swift */,
+				18D0692F211828AD008450C0 /* ElectivePositionCell.swift */,
+				18D06935211862DA008450C0 /* EBallotCell.swift */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -427,9 +456,13 @@
 		189DDADB21021D7100823EC3 /* Modle */ = {
 			isa = PBXGroup;
 			children = (
+				18D0692B21181356008450C0 /* BallotLike.swift */,
+				189ED1D52114CF40001A0D80 /* Admin.swift */,
 				183A1E0D21122A5B00D78C2B /* FAQ.swift */,
+				18D0693921187E9D008450C0 /* Candidate.swift */,
 				18E74854210F5C210042F5F1 /* Philosophy.swift */,
 				18C34D97210F0FBA0000AB22 /* Donate.swift */,
+				18D0693121182A7D008450C0 /* ElectivePosition.swift */,
 				18C34D90210EF5680000AB22 /* Intro.swift */,
 				18C34D9C210F458D0000AB22 /* OnlineTool.swift */,
 				189DDB3721026EFA00823EC3 /* Event.swift */,
@@ -465,6 +498,10 @@
 		189DDAED21021D7200823EC3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18C310852115631200D649A0 /* SupportingControllers */,
+				18A039C521145AFB0027063E /* MyProfile */,
+				18F3CEB121143B6100D78BC1 /* Feedback */,
+				18F3CEAE211433A000D78BC1 /* Share */,
 				188E8084211064B80037AC30 /* Vote */,
 				18E74856210F7FBE0042F5F1 /* HelpDesk */,
 				18C34D99210F44610000AB22 /* FAQ */,
@@ -572,6 +609,22 @@
 			path = EventNSchedule;
 			sourceTree = "<group>";
 		};
+		18A039C521145AFB0027063E /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				18A039C6211469340027063E /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		18C310852115631200D649A0 /* SupportingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18C310862115632000D649A0 /* LoginViewController.swift */,
+			);
+			path = SupportingControllers;
+			sourceTree = "<group>";
+		};
 		18C34D8B210EEBA20000AB22 /* AboutUs */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +656,21 @@
 				18E74857210F8B180042F5F1 /* HelpDeskViewController.swift */,
 			);
 			path = HelpDesk;
+			sourceTree = "<group>";
+		};
+		18F3CEAE211433A000D78BC1 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		18F3CEB121143B6100D78BC1 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				18F3CEB221143B7000D78BC1 /* FeedbackViewController.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		42A705314E8BD8E65A457871 /* Frameworks */ = {
@@ -848,9 +916,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D06936211862DA008450C0 /* EBallotCell.swift in Sources */,
 				189DDB0521021D7300823EC3 /* TPKACollectionViewController.m in Sources */,
 				189DDB0D21021D7300823EC3 /* BootTeamDetailCell.swift in Sources */,
 				189DDB1221021D7300823EC3 /* ApiService.swift in Sources */,
+				18F3CEB321143B7000D78BC1 /* FeedbackViewController.swift in Sources */,
+				18D0693421182BFB008450C0 /* ImageView+extension.swift in Sources */,
 				183A1E102112450200D78C2B /* FAQDetailsViewController.swift in Sources */,
 				189DDB1721021D7300823EC3 /* State.swift in Sources */,
 				18D3E7A8210E527D00A24164 /* EFlyrDetailViewController.swift in Sources */,
@@ -861,6 +932,7 @@
 				189DDB1A21021D7300823EC3 /* Ward.swift in Sources */,
 				189DDB3821026EFA00823EC3 /* Event.swift in Sources */,
 				189DDB2021021D7300823EC3 /* BootTeamViewController.swift in Sources */,
+				18D0693221182A7D008450C0 /* ElectivePosition.swift in Sources */,
 				183A1E0C21120CA700D78C2B /* FAQViewController.swift in Sources */,
 				189DDB0621021D7300823EC3 /* TPKAScrollViewController.m in Sources */,
 				189456E521030E6C00260434 /* EventDetailsViewController.swift in Sources */,
@@ -868,15 +940,19 @@
 				1825C98C210911290092EEF2 /* Data+Extension.swift in Sources */,
 				189DDB0921021D7300823EC3 /* AppParam.swift in Sources */,
 				18D3E7AB210E52CC00A24164 /* EFlyr.swift in Sources */,
+				18D0693A21187E9E008450C0 /* Candidate.swift in Sources */,
 				189DDB1D21021D7300823EC3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				18D3E7A9210E527D00A24164 /* EFlyrViewController.swift in Sources */,
+				18D069382118630B008450C0 /* EBallotPaperViewController.swift in Sources */,
 				18C34D92210EF5690000AB22 /* Intro.swift in Sources */,
 				189DDB2C21021D7300823EC3 /* VideoCell.swift in Sources */,
 				18C34D9B210F44780000AB22 /* OnlineToolsViewController.swift in Sources */,
 				18C34D9D210F458D0000AB22 /* OnlineTool.swift in Sources */,
 				189DDB0721021D7300823EC3 /* TPKATableViewController.m in Sources */,
 				189DDB0B21021D7300823EC3 /* BootDetailScrollTopCell.swift in Sources */,
+				18C310872115632000D649A0 /* LoginViewController.swift in Sources */,
 				189DDB1521021D7300823EC3 /* LocalGoverment.swift in Sources */,
+				18A039C7211469340027063E /* MyProfileViewController.swift in Sources */,
 				18E74855210F5C210042F5F1 /* Philosophy.swift in Sources */,
 				189DDB2421021D7300823EC3 /* PolicyForamViewController.swift in Sources */,
 				189DDB2F21023D7500823EC3 /* Boot.xcdatamodeld in Sources */,
@@ -901,15 +977,19 @@
 				1825C98A2108FE380092EEF2 /* String+Validation.swift in Sources */,
 				18E74853210F5C100042F5F1 /* AboutUsViewController.swift in Sources */,
 				189DDB1021021D7300823EC3 /* TopSliderCell.swift in Sources */,
+				18D0692E2118253C008450C0 /* ElectivePositionsViewController.swift in Sources */,
+				189ED1D62114CF40001A0D80 /* Admin.swift in Sources */,
 				189DDB0F21021D7300823EC3 /* BootTeamCell.swift in Sources */,
 				18C34D98210F0FBB0000AB22 /* Donate.swift in Sources */,
 				189DDB1921021D7300823EC3 /* VideoList.swift in Sources */,
 				189DDB2121021D7300823EC3 /* HomeViewController.swift in Sources */,
 				183A1E0E21122A5B00D78C2B /* FAQ.swift in Sources */,
+				18D06930211828AD008450C0 /* ElectivePositionCell.swift in Sources */,
 				18C34D96210F08C30000AB22 /* FinanceViewController.swift in Sources */,
 				189DDB0E21021D7300823EC3 /* BootTamTableCell.swift in Sources */,
 				189DDB1F21021D7300823EC3 /* BootDetailViewController.swift in Sources */,
 				189DDB362102696D00823EC3 /* EventCell.swift in Sources */,
+				18D0692C21181356008450C0 /* BallotLike.swift in Sources */,
 				189DDB2B21021D7300823EC3 /* PolicyForamCell.swift in Sources */,
 				189DDB1B21021D7300823EC3 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				189DDB2A21021D7300823EC3 /* PolicyCell.swift in Sources */,
