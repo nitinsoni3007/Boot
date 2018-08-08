@@ -48,6 +48,7 @@ class OnlineToolsViewController: UIViewController, UITableViewDelegate, UITableV
         let cellId = "OnlineToolCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId)
         let lblTitle = cell?.contentView.viewWithTag(101) as! UILabel
+//        lblTitle.textColor = "#800000".colorFromHeX()
         lblTitle.text = onlineTools[indexPath.row].title
         return cell!
     }

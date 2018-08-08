@@ -17,11 +17,9 @@ class MainFestoViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         self.tblPolicyData.rowHeight = UITableViewAutomaticDimension
         self.tblPolicyData.estimatedRowHeight = 500.0
-
         
         self.callGetPolicyData()
         // Do any additional setup after loading the view.
@@ -71,10 +69,9 @@ class MainFestoViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.lblTitle.text =  objPolicyData.head
         cell.txtDes.text =  ViewBorder.shareViewBorder.stringFromHTML(strHtml: objPolicyData.descriptionPolicydata!)
         
-        cell.txtDes.translatesAutoresizingMaskIntoConstraints = true
+        //cell.txtDes.translatesAutoresizingMaskIntoConstraints = true
         cell.txtDes.sizeToFit()
        
-        
         return cell
     }
     

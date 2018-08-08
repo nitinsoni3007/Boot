@@ -10,11 +10,11 @@ import UIKit
 
 struct WebServiceConstans {
     
-     //static let BaseUrl = "http://www.adenuga.org/BOOT_Event/index.php/"
+   // static let BaseUrlLocal = "http://www.adenuga.org/BOOT_Event/index.php/"
     static let BaseUrl = "https://www.boot.org.ng/boot_test/index.php/"
     
     static let APP_PARAMETER = "applicationparameters"
-    static let Addbar =  "ADDBAR"
+    static let Addbar =  "AddBar"
     static let Policy = "policy"
     static let Video = "video"
     static let Title = "title"

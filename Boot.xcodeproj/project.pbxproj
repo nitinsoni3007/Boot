@@ -97,6 +97,7 @@
 		18F3CEB321143B7000D78BC1 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3CEB221143B7000D78BC1 /* FeedbackViewController.swift */; };
 		1BFB43F73EBDDBCFF1221A7E /* Pods_BootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6F54CD4401B5E51CAED67D /* Pods_BootTests.framework */; };
 		6CF37275B3A95438FF9E175B /* Pods_BootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF5FFF23EB1E1EF520E256E /* Pods_BootUITests.framework */; };
+		B64D1297211B191B0028EADB /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64D1296211B191B0028EADB /* String+Extention.swift */; };
 		BF008B7D226656E14163F436 /* Pods_Boot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17CC2C03D88D6BBE51790B /* Pods_Boot.framework */; };
 /* End PBXBuildFile section */
 
@@ -226,6 +227,7 @@
 		7F99CF5F96BEE096AFB06289 /* Pods-BootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BootUITests/Pods-BootUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9951461E9BA07D4E10446968 /* Pods-BootTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BootTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BootTests/Pods-BootTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5E6D0ACEEF6392477BBE265 /* Pods-Boot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boot/Pods-Boot.release.xcconfig"; sourceTree = "<group>"; };
+		B64D1296211B191B0028EADB /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		BE6F54CD4401B5E51CAED67D /* Pods_BootTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BootTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E62A70A40D4930C781DB6629 /* Pods-Boot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boot/Pods-Boot.debug.xcconfig"; sourceTree = "<group>"; };
 		ED17CC2C03D88D6BBE51790B /* Pods_Boot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,7 @@
 				1825C9892108FE380092EEF2 /* String+Validation.swift */,
 				1825C98B210911290092EEF2 /* Data+Extension.swift */,
 				18D0693321182BFB008450C0 /* ImageView+extension.swift */,
+				B64D1296211B191B0028EADB /* String+Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				189DDB0B21021D7300823EC3 /* BootDetailScrollTopCell.swift in Sources */,
 				18C310872115632000D649A0 /* LoginViewController.swift in Sources */,
 				189DDB1521021D7300823EC3 /* LocalGoverment.swift in Sources */,
+				B64D1297211B191B0028EADB /* String+Extention.swift in Sources */,
 				18A039C7211469340027063E /* MyProfileViewController.swift in Sources */,
 				18E74855210F5C210042F5F1 /* Philosophy.swift in Sources */,
 				189DDB2421021D7300823EC3 /* PolicyForamViewController.swift in Sources */,

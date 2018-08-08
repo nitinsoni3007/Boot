@@ -64,7 +64,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         
         self.getAppParam()
         
-        //self.getAddBar()
+        self.getAddBar()
         
         
     }
@@ -302,7 +302,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
                 
             }
             
-          //  self.loadBottomScroll()
+             self.loadBottomScroll()
             
         }
     }
@@ -489,9 +489,9 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         }
         else
         {
-//            loadScrollViewWithPageBottom(page: Int(page - 1))
-//            loadScrollViewWithPageBottom(page: Int(page))
-//            loadScrollViewWithPageBottom(page: Int(page + 1))
+            loadScrollViewWithPageBottom(page: Int(page - 1))
+            loadScrollViewWithPageBottom(page: Int(page))
+            loadScrollViewWithPageBottom(page: Int(page + 1))
         }
         
     }

@@ -182,7 +182,8 @@ class FinanceViewController: UIViewController, UITableViewDelegate, UITableViewD
         headerView.backgroundColor = UIColor.white
         let btnSection = UIButton(frame: CGRect(x: 8, y: 0, width: view.bounds.width - 16, height: 40))
         btnSection.backgroundColor = UIColor.white
-        btnSection.setTitleColor(UIColor.red, for: .normal)
+        btnSection.setTitleColor("#800000".colorFromHeX(), for: .normal)
+       // btnSection.setTitleColor(UIColor.red, for: .normal)
         btnSection.contentHorizontalAlignment = .left
         btnSection.setTitle(arrDonateInfos[section].bankAccountName, for: .normal)
         btnSection.tag = section
