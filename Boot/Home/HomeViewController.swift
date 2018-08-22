@@ -232,7 +232,11 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: 100.0, height: 100.0)
+        var dimention = collectionView.bounds.width * 0.30
+        if dimention > 100 {
+            dimention = 100
+        }
+        return CGSize(width: dimention, height: dimention)
     }
     
     
@@ -286,7 +290,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     {
         ApiService().getApplicationParam(strAction: WebServiceConstans.Addbar, strwbType: "GET", dict: [:]) { (dictAppBar) in
             
-            let arrTemp  =   dictAppBar.object(forKey: "add_bar") as! NSArray
+            if let arrTemp  =   dictAppBar.object(forKey: "add_bar") as? NSArray {
             
             for (_, dict) in arrTemp.enumerated()
             {
@@ -301,8 +305,10 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
                 self.arrAddBar.append(objAddBar)
                 
             }
-            
-             self.loadBottomScroll()
+            DispatchQueue.main.async {
+                self.loadBottomScroll()
+            }
+            }
             
         }
     }
